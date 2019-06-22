@@ -96,6 +96,11 @@ class HMViewController: UIViewController {
                 } else {
                     hm_view.missed = false
                     num_match += 1
+                    
+                    // Disable this button
+                    sender.isEnabled = false
+                    let new_title = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray, NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 27)!])
+                    sender.setAttributedTitle(new_title, for: .normal)
                 }
                 hm_view.setNeedsDisplay()
             }

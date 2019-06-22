@@ -96,6 +96,9 @@ class HangmanView: UIView {
                     if (String(char).lowercased() == letter) {
                         matched_list[index] = true
                         num_matched += 1
+                        
+                        // Disable the button after match
+                        
                     }
                     
                     // Check if the user has won the game
